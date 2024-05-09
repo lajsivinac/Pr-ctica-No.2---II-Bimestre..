@@ -10,7 +10,9 @@
    Fecha: 26 de abril
 */
 
+
 int secuencia[] = {6, 7, 8, 9, 10}; 
+int salida[]={11,12,14,15,16,17,18};
 int salidaA = 11;
 int salidaB = 12;
 int salidaC = 14;
@@ -24,13 +26,9 @@ void setup() {
   pinMode(3, INPUT);
   pinMode(4, INPUT);
   pinMode(5, INPUT);
-  pinMode(salidaA, OUTPUT);
-  pinMode(salidaB, OUTPUT);
-  pinMode(salidaC, OUTPUT);
-  pinMode(salidaD, OUTPUT);
-  pinMode(salidaE, OUTPUT);
-  pinMode(salidaF, OUTPUT);
-  pinMode(salidaG, OUTPUT);
+  for (int p = 0; p < 8; p++) {
+    pinMode(salida[p], OUTPUT);}
+
 
   Serial.begin(9600);
 }
@@ -127,6 +125,7 @@ void loop() {
       digitalWrite(salidaE, LOW);
       digitalWrite(salidaC, LOW);
       digitalWrite(salidaD, LOW);
+      delay(2000);
     }
   }
   
