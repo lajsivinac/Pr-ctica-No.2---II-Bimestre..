@@ -9,6 +9,8 @@ int numero7 [] = {2,3,5,6};
 int numero9 [] = {2,3,4,5,6};
 
 void setup(){
+   
+  
   Serial.begin(9600);
   Serial.println("Conversor");
   Serial.print("30 Kilogramos = ");
@@ -20,6 +22,14 @@ void setup(){
   resultado2 = conversor_A_mA(Amperios);
   Serial.print(resultado2);
   Serial.println(" Microamperios");
+  
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT); 
 }
 
 void loop(){
@@ -39,14 +49,8 @@ float conversor_A_mA (float A){
   return resultado2;
 }
 
-void pinesdesalida(){
-pinMode(2,OUTPUT);
-pinMode(3,OUTPUT);
-pinMode(4,OUTPUT);
-pinMode(5,OUTPUT);
-pinMode(7,OUTPUT);
-pinMode(8,OUTPUT);   
-}
+ 
+
 
 int secuencia_de_numeros(){
   for (int u=0; u<2; u++){
